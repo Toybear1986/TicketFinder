@@ -37,4 +37,8 @@ public class Ticket implements Comparable<Ticket> {
       return getArrivalAirport().contains(to);
     } else return false;
   }
+
+  public int getTravelTime() {
+    return travelTime;
+  }
 }
