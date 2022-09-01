@@ -50,4 +50,20 @@ public class ManagerTest {
     Ticket[] expectedArray4 = {ticket8};
     Assertions.assertArrayEquals(expectedArray4, manager.findAll("TJM", "KZN"));
   }
+
+  @Test
+  public void testComparator() {
+    TicketByTravelTimeComparator comparator = new TicketByTravelTimeComparator();
+    Ticket[] expectedArray1 = {ticket1, ticket3};
+    Assertions.assertArrayEquals(expectedArray1, manager.findAll("DME", "KZN",comparator));
+
+    Ticket[] expectedArray2 = {ticket2, ticket6, ticket4, ticket11};
+    Assertions.assertArrayEquals(expectedArray2, manager.findAll("SVO", "KZN",comparator));
+
+    Ticket[] expectedArray3 = {};
+    Assertions.assertArrayEquals(expectedArray3, manager.findAll("TJM", "DME",comparator));
+
+    Ticket[] expectedArray4 = {ticket8};
+    Assertions.assertArrayEquals(expectedArray4, manager.findAll("TJM", "KZN",comparator));
+  }
 }
