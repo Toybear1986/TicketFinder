@@ -1,11 +1,11 @@
 package ru.netology;
 
 public class Ticket implements Comparable<Ticket> {
-  int id;
-  int price;
-  String from;
-  String to;
-  int travelTime;
+  protected int id;
+  protected int price;
+  protected String from;
+  protected String to;
+  protected int travelTime;
 
   public Ticket(int id, int price, String from, String to, int travelTime) {
     this.id = id;

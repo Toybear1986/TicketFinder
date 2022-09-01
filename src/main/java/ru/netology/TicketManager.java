@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 public class TicketManager {
 
-  private final TicketRepository repository;
+  protected final TicketRepository repository;
 
   public TicketManager(TicketRepository repository) {
     this.repository = repository;
